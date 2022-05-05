@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Research Survey</title>
+</head>
+<body>
+    <h2>Market Research Survey</h2>
+    <h4>Please take a few moments to complete this satisfaction survey.</h4>
+    <hr>
+    <h4>What is your age range?</h4>
+    <select name="age" id="age">
+        <option value="18-24">18-24</option>
+        <option value="25-34">25-34</option>
+        <option value="35-50">35-50</option>
+        <option value="50+">50+</option>
+    </select>
+    <h4>What is your yearly income range?</h4>
+    <select name="range" id="range">
+        <option value="$0 - 25,000">$0 - 25,000</option>
+        <option value="$25.001 - $50,000">$25.001 - $50,000</option>
+        <option value="$50,001 - $100,000">$50,001 - $100,000</option>
+        <option value="$100,000+">$100,000+</option>
+    </select>
+    <h4>Gender Identity</h4>
+    <input type="radio" name="gender">Male <br>
+    <input type="radio" name="gender">Female <br>
+    <input type="radio" name="gender">Nonbinary <br>
+    <input id="checkgender" type="radio" name="gender">Other <br>
+    <input id="comment" type="text" name="comment" maxlength="250" autocomplete="off"
+                    onclick="document.getElementById('checkgender').checked='checked';
+                    document.querySelector('#msg').style.display='block'"
+                    oninput="document.querySelector('#msg').innerHTML= 'Maximum of 250 characters. Currently Used: '+this.value.length+' characters.' ">
+                <span id="msg" style="display: none;">Maximum of 250 characters. Currently Used: 0 characters.</span>
+    <h4>Which of the following products have your purchased in the last 2 months. Please check all that apply.</h4>
+    <input type="checkbox" name="products">Product 1 <br>
+    <input type="checkbox" name="products">Product 2 <br>
+    <input type="checkbox" name="products">Product 3
+    <h4>How often would you use our new product?</h4>
+    <input type="radio" name="often"> Daily <br>
+    <input type="radio" name="often"> Weekly <br>
+    <input type="radio" name="often"> Monthly
+    <h4>What would you pay for the new product?</h4>
+    <table>
+    <tr>
+        <td>$</td>
+        <td><input type="number" name="dollar"></td>
+        <td>.</td>
+        <td><input type="number" name="cents"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Dollars</td>
+        <td></td>
+        <td>Cents</td>
+    </tr>
+</table>
+<h4>What features would you like to see in the new product.</h4>
+<textarea name="" id="" cols="90" rows="10"></textarea>
+<h4>Please rate your level of agreement with the following statements.</h4>
+<table border="1">
+<th></th>
+<th>Strongly Disagree</th>
+<th>Disagree</th>
+<th>Agree</th>
+<th>Strongly Agree</th>
+<tr>
+    <td>Our products are priced fairly.	</td>
+    <td><input type="radio" name="products"><br>1</td>
+    <td><input type="radio" name="products"><br>2</td>
+    <td><input type="radio" name="products"><br>3</td>
+    <td><input type="radio" name="products"><br>4</td>
+</tr>
+<tr>
+    <td>Our products are high quality.</td>
+    <td><input type="radio" name="age"><br>1</td>
+    <td><input type="radio" name="age"><br>2</td>
+    <td><input type="radio" name="age"><br>3</td>
+    <td><input type="radio" name="age"><br>4</td>
+</tr>
+<tr>
+    <td>You would recommend our product to a friend or coworker.</td>
+    <td><input type="radio" name="friend"><br>1</td>
+    <td><input type="radio" name="friend"><br>2</td>
+    <td><input type="radio" name="friend"><br>3</td>
+    <td><input type="radio" name="friend"><br>4</td>
+</tr>
+</table>
+<input type="submit" value="Submit">
+    
+</body>
+</html>
